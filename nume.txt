@@ -1,0 +1,26 @@
+﻿puts "Please enter your birthday in 8 digits, like this DDMMYYYY: "
+dateinput = gets.chomp
+birthdate = dateinput.to_i
+
+number = birthdate[0] + birthdate[1] + birthdate[2] + birthdate[3] + birthdate[4] + birthdate[5] + birthdate[6] + birthdate[7]
+puts "Sum: #{number}"
+
+numstr = number.to_s
+total1 = numstr[0] + numstr[1]
+
+if total1 >= 1 && <=9
+puts "#{total1}"
+
+elsif total1 > 9
+total1 = total1.to_i
+total2 = total1[0] + total1[1]
+puts "#{total2}"
+
+end
+
+
+
+# the input from gets is a string
+# convert to integers
+# add each digit to the other
+# can't use array syntax to add integers
